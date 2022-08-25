@@ -1,0 +1,9 @@
+includes:
+	- ../private/config.neon
+parameters:
+	sqlite:
+		file: '%constants.tempDir%cache.db'
+
+extensions:
+	caching: Nette\Bridges\CacheDI\CacheExtension(%constants.tempDir%)
+services:

@@ -1,0 +1,38 @@
+{varType string $vs}
+{varType float $total}
+
+Dobrý den,
+děkujeme za objednání našeho poukazu.
+Fakturu naleznete v příloze tohoto emailu.
+
+Jak poukazy použít?
+Veškerá útrata za hry je klasicky markována na kase dle platného ceníku.
+Při platbě předložíte poukaz obsluze a dojde k odečtení částky dle hodnoty poukazu. Rozdíl v ceně poté zákazník doplatí hotově obsluze.
+
+Všechny typy poukazů se musí vyčerpat jednorázově celé. Nelze na ně vracet, ani je rozdělit na více plateb.
+
+Platnost poukazů je vždy půl roku od jeho zakoupení.
+
+Dostal/a jste víc než jednu poukázku?
+Máte hned několik možností, jak poukázku použít:
+
+1. Využijete celý poukaz najednou.
+2. Vezmete s sebou další osobu/osoby.
+3. Vyberete si poukazy postupně v různé dny (nutno vybrat vždy min.1 poukaz vcelku).
+
+
+Důležité upozornění:
+Poukázka má půlroční platnost od data vystavení, poté již nelze poukaz uplatnit !!!
+Poukázka je přenosná.
+Poukaz je nutné fyzicky přinést, aby mohl být na kase odečten.
+Poukaz, který již byl jednou použit (odečten na kase), nelze znovu uplatnit a to ani v případě, že nebyl vyčerpán v plné výši.
+
+
+Těšíme se na vás. :-)
+Upozornění:  Platbu poukázkou je nutné nahlásit obsluze před uzavřením účtu!!!! Po vyjetí účtenky hotově, již není možné poukázku uplatnit při této platbě (zbyde na příště :-) )
+
+
+Částka: {$total|number:2,',','&nbsp;'|noescape} Kč
+Číslo účtu: 293365141 / 0300
+Variabilní symbol: {$vs}
+Datum splatnosti: {date('d.m.Y', strtotime('+ 7 day'))}

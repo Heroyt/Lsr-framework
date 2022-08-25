@@ -1,0 +1,14 @@
+$custom-colors: (
+	"core": (
+		"bg": ("color": #fff, "alias": 'background'),
+		"text": ("color": #000, "alias": 'text'),
+	),
+	"black": (
+		"": #000,
+		"seethrough": rgba(0, 0, 0, .5),
+	),
+	"white": (
+		"": #fff,
+		"seethrough": rgba(255, 255, 255, .5),
+	),
+);

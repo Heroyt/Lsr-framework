@@ -1,0 +1,42 @@
+{extends '@layout.latte'}
+
+{varType string $vs}
+{varType float $total}
+
+{define content}
+	Dobrý den,<br/>
+	děkujeme za objednání našeho poukazu.<br/>
+	Fakturu naleznete v příloze tohoto emailu.<br/><br/>
+	<strong>Jak poukazy použít?</strong><br/>
+	Veškerá útrata za hry je klasicky markována na kase dle platného ceníku.<br/>
+	Při platbě předložíte poukaz obsluze a dojde k odečtení částky dle hodnoty poukazu. Rozdíl v ceně poté zákazník doplatí hotově obsluze.
+	<br/>
+	Všechny typy poukazů se musí vyčerpat jednorázově celé. Nelze na ně vracet, ani je rozdělit na více plateb. <br/>
+	<br/>
+	<strong>Platnost poukazů je vždy půl roku od jeho zakoupení.</strong><br/><br/>
+
+	<strong>Dostal/a jste víc než jednu poukázku?</strong><br/>
+	Máte hned několik možností, jak poukázku použít:<br/>
+
+	<ol>
+		<li>Využijete celý poukaz najednou.</li>
+		<li>Vezmete s sebou další osobu/osoby.</li>
+		<li>Vyberete si poukazy postupně v různé dny (nutno vybrat vždy min.1 poukaz vcelku).</li>
+	</ol>
+	<br/>
+
+	<strong>Důležité upozornění:</strong><br/>
+	Poukázka má půlroční platnost od data vystavení, poté již nelze poukaz uplatnit !!! <br/>
+	Poukázka je přenosná.<br/>
+	Poukaz je nutné fyzicky přinést, aby mohl být na kase odečten.<br/>
+	Poukaz, který již byl jednou použit (odečten na kase), nelze znovu uplatnit a to ani v případě, že nebyl vyčerpán v plné výši.
+	<br/><br/>
+
+	Těšíme se na vás. :-)<br/><br/>
+	<strong>Upozornění:</strong>  Platbu poukázkou je nutné nahlásit obsluze před uzavřením účtu!!!! Po vyjetí účtenky hotově, již není možné poukázku uplatnit při této platbě (zbyde na příště :-) )
+	<br/><br/>
+	<strong>Částka:</strong> {$total|number:2,',','&nbsp;'|noescape} Kč<br/>
+	<strong>Číslo účtu:</strong> 293365141 / 0300 <br/>
+	<strong>Variabilní symbol:</strong> {$vs}<br/>
+	<strong>Datum splatnosti:</strong> {date('d.m.Y', strtotime('+ 7 day'))}<br/>
+{/define}

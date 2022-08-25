@@ -1,0 +1,69 @@
+{define header}
+	<header class="navbar navbar-expand-lg navbar-light bg-light">
+		<div class="container-fluid">
+			<a href="" class="navbar-brand">Lsr app</a>
+			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navBarContent"
+					aria-controls="navBarContent" aria-expanded="false" aria-label="{lang 'Toggle navigation'}">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navBarContent">
+				<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+					{foreach Lsr\Core\App::getMenu() as $key => $menuItem}
+						<li class="nav-item{if count($menuItem->children) > 0} dropdown{/if}">
+							{if count($menuItem->children) > 0}
+								<a class="nav-link dropdown-toggle" id="navbarDropdown{$key}" role="button"
+								   data-bs-toggle="dropdown" aria-expanded="false">
+									{if !empty($menuItem->icon)}
+										<i class="{$menuItem->icon}"></i>
+									{/if}
+									{$menuItem->name}
+								</a>
+								<ul class="dropdown-menu" aria-labelledby="navbarDropdown{$key}">
+									<li n:foreach="$menuItem->children as $child">
+										<a class="dropdown-item" href="{$child->url}">
+											{if !empty($child->icon)}
+												<i class="{$child->icon}"></i>
+											{/if}
+											{$child->name}
+										</a>
+									</li>
+								</ul>
+							{else}
+								<a class="nav-link{if $menuItem->active} active{/if}" aria-current="page"
+								   href="{$menuItem->url}">
+									{if !empty($menuItem->icon)}
+										<i class="{$menuItem->icon}"></i>
+									{/if}
+									{$menuItem->name}
+								</a>
+							{/if}
+						</li>
+					{/foreach}
+				</ul>
+			</div>
+			<div class="btn-group ms-auto">
+				{var string $selectedLang = explode('_',$_GET['lang'] ?? Lsr\Core\App::$language->id)[0]}
+				{var string $selectedCountry = Lsr\Core\App::getSupportedLanguages()[$selectedLang]}
+				<button class="btn btn-light btn-lg dropdown-toggle" type="button" data-bs-toggle="dropdown"
+						aria-expanded="false">
+					<img src="{getUrl}assets/flags/{\Lsr\Core\Constants::COUNTRIES[$selectedCountry]|escapeUrl}.png"
+						 style="height: 2rem; width: 2rem;"
+						 alt="{\Lsr\Core\Constants::COUNTRIES[$selectedCountry]}">
+				</button>
+				<ul class="dropdown-menu bg-white" style="min-width: 5rem;">
+					{foreach Lsr\Core\App::getSupportedLanguages() as $lang => $country}
+						{continueIf $selectedLang === $lang}
+						<li>
+							<a class="dropdown-item" href="{link ['lang', $lang, 'redirect' => $request->path]}">
+								<img class="mx-auto d-block"
+									 src="{getUrl}assets/flags/{\Lsr\Core\Constants::COUNTRIES[$country]|escapeUrl}.png"
+									 style="height: 2rem; width: 2rem;"
+									 alt="{\Lsr\Core\Constants::COUNTRIES[$country]}">
+							</a>
+						</li>
+					{/foreach}
+				</ul>
+			</div>
+		</div>
+	</header>
+{/define}

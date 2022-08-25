@@ -1,0 +1,66 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: lsr-framework\n"
+"POT-Creation-Date: 2021-12-01 12:05+0100\n"
+"PO-Revision-Date: 2022-08-23 18:05+0200\n"
+"Last-Translator: Tomáš Vojík <vojik@wboy.cz>\n"
+"Language-Team: English\n"
+"Language: en_US\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 3.0.1\n"
+"X-Poedit-Basepath: .\n"
+
+# /templates/../vendor/lsr/helpers/templates/Caching/tab.latte:28
+msgctxt "debugPanel"
+msgid "%d call"
+msgid_plural "%d calls"
+msgstr[0] "%d call"
+msgstr[1] "%d calls"
+
+# /templates/../vendor/lsr/helpers/templates/Translation/tab.latte:27
+# /templates/../vendor/lsr/helpers/templates/Translation/panel.latte:3
+msgctxt "debugPanel"
+msgid "Translations"
+msgstr "Translations"
+
+# /templates/../vendor/lsr/helpers/templates/Translation/panel.latte:6
+msgctxt "debugPanel"
+msgid "Language"
+msgstr "Language"
+
+# /templates/../vendor/lsr/helpers/templates/Translation/panel.latte:10
+msgctxt "debugPanel"
+msgid "HTTP header"
+msgstr "HTTP header"
+
+# /templates/../vendor/lsr/helpers/templates/Translation/panel.latte:16
+msgctxt "debugPanel"
+msgid "Translated strings"
+msgstr "Translated strings"
+
+# /templates/../vendor/lsr/helpers/templates/Translation/panel.latte:19
+msgctxt "debugPanel"
+msgid "Added a new string"
+msgstr "Added a new string"
+
+# /templates/../vendor/lsr/helpers/templates/Translation/panel.latte:20
+msgctxt "debugPanel"
+msgid "String"
+msgstr "String"
+
+# /templates/../vendor/lsr/helpers/templates/Translation/panel.latte:21
+msgctxt "debugPanel"
+msgid "Plural"
+msgstr "Plural"
+
+# /templates/../vendor/lsr/helpers/templates/Translation/panel.latte:22
+msgctxt "debugPanel"
+msgid "Context"
+msgstr "Context"
+
+# /templates/header.latte:6
+msgid "Toggle navigation"
+msgstr "Toggle navigation"

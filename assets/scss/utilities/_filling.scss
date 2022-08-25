@@ -1,0 +1,11 @@
+@use "sass:map";
+
+.w-fill {
+	left: calc((100% - 100vw) / 2);
+	position: relative;
+	width: 100vw;
+}
+
+.flex-fill-same {
+	flex: 1 1 0 !important;
+}

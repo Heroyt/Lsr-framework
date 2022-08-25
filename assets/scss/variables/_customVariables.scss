@@ -1,0 +1,22 @@
+// File: _customVariables.scss
+// Author: Tomáš Vojík <xvojik00@stud.fit.vutbr.cz>
+// Custom variables, that rewrite default Bootstrap values
+@use 'colors' as *;
+@use "sass:map";
+@use "../functions";
+
+$tmp-theme-colors: functions.getThemeColors($custom-colors);
+
+$navbar-dark-color: var(--white);
+$navbar-dark-hover-color: var(--danger);
+
+$body-bg: map.get($tmp-theme-colors, "background");
+$body-color: map.get($tmp-theme-colors, "text");
+
+$form-check-label-cursor: pointer;
+
+$nav-tabs-link-active-color: var(--white);
+
+$input-group-addon-color: var(--background);
+
+$font-family-sans-serif: Montserrat, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
